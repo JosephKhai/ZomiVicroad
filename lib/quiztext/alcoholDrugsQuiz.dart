@@ -1,0 +1,75 @@
+class AlcoholDrugQuiz {
+  var images = ['blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 
+  'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank', 'blank',  ];
+
+  var questions = [
+    'Mawtaw hawl ma/mawtaw tuan ma-a zuu effect khiap nadingin',
+    'Mawtaw ahih kei leh mawtaw saikel na hawl ma-in',
+    'Palikte\' huu sitna(breath test) na hih noplohna pen thukhun palsatna/daan kalhna ahi hiam?',
+    'Damdawi/Zatui na nek khitteh zu na dawn leh',
+    'Bus, taxi, mawtaw kikawm, mawtaw golte ahih kei leh a lauhuai van pua mawtaw na hawl ciangin na sisan sungah zuu bangzah a om ciangin thukhun palsatna/daan kalh ahi hiam?',
+    'Mawtaw nahawl ma-a zuu khatvei nihvei dawnna in',
+    'Zuu na dawn khit ciang hong sukha lo/bang mah cilo tawh aki bat hangin, bang hih ding na hiam?',
+    'Zuu pen lungsim leh ngaihsutna kiam sak thei ahi hi. A deihna in',
+    'Zuu na dawn khit ciangin',
+    'Zuu dawn dinga na vakkhiat ciangin zuu dawn leh mawtaw hawl na thuah loh nading lampi hoih pen ahih leh',
+    'Mawtaw hawlten zuu a dawn ciangun, tuahsiatna/mitawh kitaihna a tuah uh pen',
+    'Thursday, Friday leh Saturday nitaka mawtaw tuahsia te lakah bangzah pen zukhamna leh zudawnna hang ahi hiam?',
+    'Thukhun in bangzah ciang zuu dawn thei bek ding cih pen',
+    'A kisin cil(learner) ahih kei leh ciangtan nei (P)license na hih leh, BAC (Blood Alcohol Concentration) bangzah ciang kingah hiam?',
+    'Damdawi/Zatui zaha nam khat peuhpeuh ne na hi leh',
+    'A kikham zatui/damdawi (drug) na zat leh',
+    'A kikham zatui(drug) na zat a, mawtaw na hawl ma-in a thupi pen in',
+    'A kikham lo zatui, bukza or chithak za, cih bang na nekmanin hong sukhak/lauhuaisak(affected) leh',
+    'Na mawtaw na hawl nop hangin na lu na mahmah hi. Na lawmte khatin lunat damna zatui hong pia a, tua zatang na neek ma-in bang hih ding na hiam?',
+    'Zatui zaha tuamtuam tawh ne napi in mawtaw hawl nuam veve na hih leh',
+  ];
+
+  var choice = [
+    ['Na dawn zah tawm leh tam tawh kizui a hun nangak kul', 'Tui hai khat dawn in', 'Coffee siang dawn in'],
+    ['Zuu dawn ngiat loh ding hi', 'Zuu tawm kihel beer 285 ml khawng dawn in', 'Spirit them khat (30 ml or 1 Oz) bek dawnin'],
+    ['Mawtaw hawl kisin lai nahih leh daan kalhna hi lo hi', 'Zuu nadawn ngei nai kei leh daan kalhna hi lo hi', 'A tawntungin daan kalhna hi'],
+    ['Patauhna(emergency) khat peuhpeuhah na siamna khang ding hi', 'Zuu bek na dawn sangin zuu tha hat lo tuam ding hi', 'Na mawtaw hawl siamna nakpi takin hong nawngkai sak ding hi'],
+    ['0.02', '0.08', '0.05'],
+    ['Mawtaw hawl hong siam sak hi', 'Thukhensat pak theihna leh omzia hong sukha ding hi', 'Mawtaw hawl zia/siamna bangmah hong sukha lo ding hi'],
+    ['Ni dang sangin maan et kin zaw in', 'Mawtaw hawlin, ahi zongin, freeways ah pai kei-in',  'Na hihtheihna kiam ahih lam phawk denin'],
+    ['Na khuak manlang sak ahih manin na na hoihsep theih zaw hi', 'Na khuakin manlang taka na asep ding kimlai damtak in sem sak hi', 'Hong dai sakin ngaihsutna kician sak zaw hi'],
+    ['Mawtaw hatna zah na telkhial thei hi (nang hatna zah leh midangte hatna zah)', 'Lampi tunga thupiangte hong kiin sak zaw hi', 'Zuu dawn lo-a na hawl ngeina bangin hong hawl sak thei hi'],
+    ['Zuu dawn khit nai khat sung khawl photin inla, tuakhit ciangin ciah panin', 'Tawm khat na dawn khit teh, bangci ciah ding cih ngaihsut kipan in', 'Nang hawl kullo-a naciah kik theihna dingin geelkhol in'],
+    ['Kibang kim lel hi', 'Nasia lo zaw deuh hi', 'Nasia zaw sem hi'],
+    ['About 50%', 'About 10%', 'About 30%'],
+    ['Zuu peuhmah dawn loh ding', 'Exercise lak leh coffee ciik dawn ding', 'Zu dawn zah tehna (huu sitna) lei ding'],
+    ['0.05', '0.02', 'Zero'],
+    ['Damdawi na nek khit ciangin sun sung bekin hawl in', 'Na doctor tung pan ahizongin zatui zuakte tung pan ahizongin, na damdawi nekin na mawtaw hawl hong sukha ding hiam cih dong inla, a kisam bangin gamtang in', 'Mawtaw golpi hilo, mawtaw neute kia hawl in'],
+    ['Mawtaw hawl kei-in', 'Mawtaw na hawl ma-in coffee dawn masa in', 'Mawtaw tawmna bekah hawl in'],
+    ['Na gil sungah ann tawm om sak in', 'Midang khat nang tawh a tuang khawm dingin zawnin', 'a kikhawm zatui(drug) ii lauhuai na thei masa in'],
+    ['Khuavak sung bekin hawl in', 'Na mawtaw hawl hong huh ding mi na kisam hi/na nei ding hi', 'Mawtaw hawl kei in'],
+    ['A lai kisuang limtakin sim masa inla, siavuan/doctorte piak nam ahi hiam cih leh kidop ding a kigelh bang om hiam cih cian photin', 'Bawngnawi-in zatui ii affect kiam sak ahih manin haipi khat dawn in', 'Zatang a nek manin haksatna a tuak uh hiam cih na lawmte dong in'],
+    ['Na zatui zaha neekte in hong sukha hiam cih na kitheih nadingin na veng sunguh ah kidawm takin hawlin', 'Zatui zaha tuamtuam na neekkhopte in mawtaw hawl a lauhuai sak hiam cih na doctorte dong in', 'Na mawtaw hawl ngeina a bang hiam cih hilh dingin na passengerte vaikhak in'],
+  ];
+
+  var correctAnswers = 
+  [
+    'Na dawn zah tawm leh tam tawh kizui a hun nangak kul', 
+    'Zuu dawn ngiat loh ding hi',
+    'A tawntungin daan kalhna hi',
+    'Na mawtaw hawl siamna nakpi takin hong nawngkai sak ding hi',
+    '0.02',
+    'Thukhensat pak theihna leh omzia hong sukha ding hi',
+    'Na hihtheihna kiam ahih lam phawk denin',
+    'Na khuakin manlang taka na asep ding kimlai damtak in sem sak hi',
+    'Mawtaw hatna zah na telkhial thei hi (nang hatna zah leh midangte hatna zah)',
+    'Nang hawl kullo-a naciah kik theihna dingin geelkhol in',
+    'Nasia zaw sem hi',
+    'About 50%',
+    'Zuu peuhmah dawn loh ding',
+    'Zero',
+    'Na doctor tung pan ahizongin zatui zuakte tung pan ahizongin, na damdawi nekin na mawtaw hawl hong sukha ding hiam cih dong inla, a kisam bangin gamtang in',
+    'Mawtaw hawl kei-in',
+    'a kikhawm zatui(drug) ii lauhuai na thei masa in',
+    'Mawtaw hawl kei in',
+    'A lai kisuang limtakin sim masa inla, siavuan/doctorte piak nam ahi hiam cih leh kidop ding a kigelh bang om hiam cih cian photin',
+    'Zatui zaha tuamtuam na neekkhopte in mawtaw hawl a lauhuai sak hiam cih na doctorte dong in',
+  ];
+
+}
