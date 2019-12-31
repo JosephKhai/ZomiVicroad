@@ -35,12 +35,12 @@ class _MenuScreenState extends State<MenuScreen> {
             children: <Widget>[
               ListTile(
                 leading: Icon(Icons.arrow_back),
-                title: Text('Main Menu'),
+                title: Text('Main Menu', style: TextStyle(fontSize: 18),),
                 onTap: () => Navigator.pop(context),
               ),
               ListTile(
                   leading: Icon(Icons.close),
-                  title: Text('Close App (Khak ding)'),
+                  title: Text('Close App (Khak ding)', style: TextStyle(fontSize: 18),),
                   onTap: () => exit(0))
             ],
           ),
